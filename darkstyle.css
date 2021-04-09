@@ -9,22 +9,26 @@
 }
 
 /* .left-menu, */
-main,
-.right-menu{
+main{
     border: 1px solid whitesmoke;
+    margin: 0 10px;;
 }
 
 html{
 --primary-blue:rgba(29,161,242,1.00);
 --primary-gray:rgb(217, 217, 217);
 --text-gray:#6E767D;
+--background-color:rgb(47, 47, 47);
+--border-color:1px solid rgb(84, 84, 84);
+--card-padding: 12px 16px;
+--link-blue: #1B95E0;
 }
 
 body{
     display: grid;
     grid-template:
     "left-menu  main right-menu"100vh/
-    1fr 2fr 1fr;
+    1fr 6fr 4fr;
 
     color: var(--primary-gray);
 }
@@ -112,18 +116,130 @@ body{
     align-self: center;
 }
 
-
-
-
-
-
-
-
-
-main{
-    grid-area: main;
-}
+/* RIGHT MENU */
 
 .right-menu{
     grid-area: right-menu;
+}
+
+/* RIGHT MENU SEARCH  */
+.right-menu .search{
+    background-color:var(--background-color);
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 10px;
+    height: 40px;
+
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+
+.right-menu .search-icon{
+    width: 20px;
+    background-color: var(--background-color);
+    margin-left: 10px;
+    align-self:  center;
+}
+
+.right-menu .search-bar{
+    background-color: initial;
+}
+
+.right-menu .search-bar input{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    height: 100%;
+}
+
+/* RIGHT MENU NEWS */
+.right-menu .news{
+
+background-color:var(--background-color) ;
+padding: 5px;
+border-radius: 20px;
+margin: 10px;
+}
+
+.news h2{
+    background-color: var(--background-color);
+    border-bottom:1px solid var(--border-color) ;
+    padding: var(--card-padding);
+    font-size: 1.1rem;
+}
+
+.news .new-card{
+display: grid;
+grid-template-columns: 1fr 80px;
+background-color: var(--background-color);
+padding: var(--card-padding);
+border-bottom: var(--border-color);
+}
+
+.news .new-card img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    justify-self: right;
+
+}
+
+.news .new-card svg{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    justify-self: right;
+    background-color: transparent;
+    fill: var(--text-gray);
+
+}
+
+.new-card .trending-news,
+.new-card .trending-keyword{
+background-color: var(--background-color);
+}
+.new-card  .trending-tag{
+    background-color: transparent;
+}
+
+.new-card  span,
+.new-card  .trending-tag span{
+background-color:transparent;
+color: var(--text-gray);
+font-size: 0.8rem;
+}
+
+.new-card .trending-tag a{
+background-color:transparent;
+color: var(--link-blue);
+font-size: 0.8rem;
+}
+
+.new-card h3{
+background-color: transparent;
+font-size: 14px;
+}
+
+.news a.show-more{
+    background-color: transparent;
+    color: var(--link-blue);
+    padding: 24px 16px;
+    text-decoration: none;
+    line-height: 50px;
+    
+}
+
+main{
+    grid-area: main;
 }
