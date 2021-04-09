@@ -1,0 +1,123 @@
+/* PAGE SET UP */
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* .left-menu, */
+main,
+.right-menu{
+    border: 1px solid whitesmoke;
+}
+
+html{
+--primary-blue:rgba(29,161,242,1.00);
+--primary-gray:rgb(217, 217, 217);
+--text-gray:#6E767D;
+}
+
+body{
+    display: grid;
+    grid-template:
+    "left-menu  main right-menu"100vh/
+    1fr 2fr 1fr;
+
+    color: var(--primary-gray);
+}
+
+/* LEFT MENU */
+
+.left-menu{
+    grid-area: left-menu;
+    justify-self: right;
+    display: grid;
+    grid-template-rows: 50px 2fr 1fr 60px;
+}
+
+.left-menu .icon{
+    padding: 10px 12px;
+}
+
+/* LEFT MENU NAV  */
+
+.left-menu nav ul{
+    list-style: none;
+}
+
+.left-menu nav li{
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+}
+
+.left-menu nav li span{
+    font-size: 1.5rem;
+}
+
+/* LEFT MENU TWEET LINK  */
+.left-menu .create-tweet{
+    margin-right: 20px;
+}
+.left-menu .create-tweet a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+
+
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+ 
+}
+
+
+/* LEFT MENU ACCOUNT TAG */
+.account-tag{
+    display: grid;
+    grid-template-columns: 50px 150px 50px ;
+}
+
+.account-tag img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.account-tag .account-name{
+    display:grid;
+    grid-auto-rows: 25px;
+}
+
+.account-name p{
+    color: var(--text-gray);
+}
+
+
+
+
+
+
+
+
+
+main{
+    grid-area: main;
+}
+
+.right-menu{
+    grid-area: right-menu;
+}
