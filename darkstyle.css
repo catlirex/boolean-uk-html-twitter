@@ -35,11 +35,12 @@ body{
     grid-area: left-menu;
     justify-self: right;
     display: grid;
-    grid-template-rows: 50px 2fr 1fr 60px;
+    grid-template-rows: 50px 2fr 1fr 50px;
+    padding: 10px;
 }
 
 .left-menu .icon{
-    padding: 10px 12px;
+    padding: 5px 12px;
 }
 
 /* LEFT MENU NAV  */
@@ -56,7 +57,8 @@ body{
 }
 
 .left-menu nav li span{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* LEFT MENU TWEET LINK  */
@@ -104,6 +106,10 @@ body{
 
 .account-name p{
     color: var(--text-gray);
+}
+
+.account-tag .account-more{
+    align-self: center;
 }
 
 
