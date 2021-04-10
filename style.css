@@ -8,18 +8,12 @@
 }
 
 body{
-    background-color: black;
+    background-image: url(assets/images/black.jpeg);
+    
 }
 
 ::-webkit-scrollbar {
     display: none;
-}
-
-
-/* .left-menu, */
-main{
-    border: 1px solid whitesmoke;
-    margin: 0 10px;;
 }
 
 html{
@@ -50,6 +44,9 @@ body{
     grid-template-rows: 50px 500px 1fr 50px;
     padding: 10px;
     height: 100vh;
+
+    position: fixed;
+    left: 30px;
     
 }
 
@@ -100,20 +97,16 @@ body{
  
 }
 
-
 /* LEFT MENU ACCOUNT TAG */
 .account-tag{
     display: grid;
     grid-template-columns: 50px 150px 50px ;
-   
-
 }
 
 img.avatar{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-
 }
 
 .account-name{
@@ -125,7 +118,7 @@ img.avatar{
     color: var(--text-gray);
 }
 
-.account-tag .account-more{
+.account-tag .more-icon{
     align-self: center;
 }
 
@@ -133,7 +126,6 @@ img.avatar{
 
 .right-menu{
     grid-area: right-menu;
-    overflow: scroll;
 }
 
 /* RIGHT MENU SEARCH  */
@@ -174,8 +166,6 @@ img.avatar{
     line-height: inherit;
     height: 100%;
 }
-
-
 
 input, select, textarea{
     color: var(--text-gray);
@@ -241,10 +231,13 @@ font-size: 0.8rem;
 .new-card .trending-tag a{
 color: var(--link-blue);
 font-size: 0.8rem;
+text-decoration: none;
 }
 
-.new-card h3{
-font-size: 14px;
+.new-card h3,
+.tweet-account-name h2{
+font-size: 1rem;
+margin: 5px 0;
 }
 
 a.show-more{
@@ -306,7 +299,243 @@ footer{
 text-decoration: underline;
 }
 
+
+/* MAIN  */
 main{
     grid-area: main;
+    background-color:#15181c ;
+    /* overflow: scroll; */
 
+}
+
+/* MAIN HEADER  */
+main header{
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    padding: var(--card-padding);
+    border-left: var(--border-color);
+    border-right: var(--border-color);
+}
+main header h1{
+  font-size: 1.5rem;  
+}
+
+main header svg{
+    fill: var(--link-blue);
+    justify-self:left;
+}
+
+
+
+/* CONTENT TEXTAREA  */
+
+
+.content .create-tweet{
+    display: grid;
+    grid-template-columns: 50px 1fr ;
+    padding: var(--card-padding);
+    border: var(--border-color);
+    margin-bottom: 10px;
+}
+
+.create-tweet .avatar{
+    width: 50px;
+    height: 50px;
+}
+
+.create-tweet form{
+    display: grid;
+    grid-template: 
+    "add-caption add-caption" auto
+    "tweet-function post-tweet" 50px/
+    1fr 100px;
+}
+
+.add-caption{
+    grid-area: add-caption;
+    padding: var(--card-padding);
+}
+
+.tweet-function{
+    grid-area: tweet-function;
+    list-style: none;
+    margin-top: 12px;
+}
+
+.tweet-function li{
+    display: inline-block;
+    width: 40px;
+    
+}
+
+.tweet-function li svg{
+    fill:var(--link-blue);
+    width: 25px;
+}
+
+.post-tweet{
+    grid-area: post-tweet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: right;
+
+    width: 80px;
+    height: 45px;
+
+
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    opacity: 0.5;
+    
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: none;
+}
+
+textarea {
+    appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  resize: none;
+  }
+
+/* TWEET CARD(UPLOAD MEDIA) */
+.tweet-external-link,
+.tweet-retweet,
+.tweet-media-upload{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: var(--card-padding);
+    border-left: var(--border-color);
+    border-right: var(--border-color);
+    border-top: var(--border-color);
+
+
+}
+
+.tweet-header{
+    display: grid;
+    grid-template-columns: 1fr 35px;
+}
+
+.tweet-account-name{
+    display: grid;
+    grid-template-columns: repeat(4,auto) 1fr;
+    grid-gap: 5px;
+}
+
+.tweet-account-name span{
+    align-self: center;
+    color: var(--text-gray);
+    font-size: 0.8rem;
+}
+
+svg.verified{
+width:20px
+}
+
+.tweet-external-link article img,
+.tweet-retweet .retweet-card article img,
+.tweet-media-upload article img{
+    width: 520px;
+    height: 280px;
+    border-radius: 15px;
+    object-fit: cover;
+    }
+
+.tweet-action-bar{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+}
+
+.tweet-action-bar li{
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    align-items: center;
+}
+
+.tweet-action-bar .tweet-action{
+    width: 20px;
+    fill: var(--text-gray);
+}
+
+.tweet-action-bar span{
+    color: var(--text-gray);
+    font-size: 0.8rem;
+}
+
+/* RETWEET CARD  */
+.retweet-card{
+    border-top: var(--border-color);
+    border-right: var(--border-color);
+    border-left: var(--border-color);
+
+    padding-top: 10px;
+    border-radius: 20px;
+    margin-top: 5px;;
+}
+
+.retweet-card .tweet-header{
+    grid-template-columns: 25px auto ;
+    margin: 0 10px;
+}
+
+.retweet-card .avatar{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.retweet-card p{
+    padding: 0 10px 10px 10px;
+}
+
+article p a{
+text-decoration: none;
+color: var(--link-blue);  
+}
+
+a.link-card{
+    text-decoration: none;
+    display: grid;
+    border: var(--border-color);
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.link-meta-content{
+    padding: var(--card-padding);
+}
+
+.link-card h2{
+    color: var(--primary-gray);
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 5px 0;;
+}
+
+.link-card p{
+    color: var(--text-gray);
+    display: inline-block;
+}
+
+.link-card .link-icon{
+    width: 20px;
+    fill:var(--text-gray);
+    padding-top: 5px;
+    
 }
