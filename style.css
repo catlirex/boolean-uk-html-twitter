@@ -19,7 +19,7 @@ html{
 --border-color:1px solid rgb(84, 84, 84);
 --card-padding: 12px 16px;
 --link-blue: #1B95E0;
---hover-background:rgba(29,161,242,0.1);
+--hover-background:rgba(29,161,242,0.2);
 --hover-card-background: #373737;
 --website-background:black;
 --icon-color:#d9d9d9;
@@ -27,11 +27,12 @@ html{
 
 .light{
     --website-background:white;
-    --background-color:rgba(227, 237, 244, 0.866);
+    --background-color:rgb(227, 237, 244);
     --primary-gray:rgb(0, 0, 0);
     --text-gray:#595f63;
     --border-color:1px solid rgb(203, 203, 203);
    --icon-color: #1B95E0;
+   --hover-card-background: rgba(206, 226, 240, 0.866);
 }
 
 
@@ -50,8 +51,8 @@ body{
 nav svg.active-page{
     fill:var(--link-blue)
 }
-
-svg:hover{
+svg.top-tweet :hover,
+ svg.more-icon:hover{
     fill: var(--link-blue);
 }
 
@@ -146,7 +147,7 @@ svg.nav{
     grid-template-columns: 50px 150px 50px ;
 }
 
-.account-tag:hover{
+.left-menu .account-tag:hover{
     background-color: var(--hover-background);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -652,7 +653,7 @@ nav.bottom-nav-bar ul li{
     "account status" 100px
     "account-details account-details" auto/
     180px 120px;
-    background-color: black;
+    background-color: var(--website-background);
     padding: 10px;
     border-radius: 20px;
 
@@ -706,7 +707,7 @@ nav.bottom-nav-bar ul li{
 	padding: 0;
 
     font: inherit;
-	color: inherit;
+	color:white;
 	font: inherit;
     font-weight: 700;
     transition: 0.1s;
@@ -722,7 +723,7 @@ nav.bottom-nav-bar ul li{
     display: none;
     }
     .hover-account-card .status:hover{
-        background-color: rgb(165, 11, 78);
+        background-color: rgb(171, 40, 96);
     }
 
 
