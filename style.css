@@ -10,6 +10,7 @@
 body{
     background-image: url(assets/images/black.jpeg);
     
+    
 }
 
 ::-webkit-scrollbar {
@@ -95,6 +96,10 @@ body{
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
  
+}
+
+.create-tweet a.small-button{
+    display: none;
 }
 
 /* LEFT MENU ACCOUNT TAG */
@@ -325,6 +330,10 @@ main header svg{
     justify-self:left;
 }
 
+main header img.avatar{
+    display: none;
+}
+
 
 
 /* CONTENT TEXTAREA  */
@@ -450,7 +459,7 @@ width:20px
 .tweet-external-link article img,
 .tweet-retweet .retweet-card article img,
 .tweet-media-upload article img{
-    width: 520px;
+    width: 100%;
     height: 280px;
     border-radius: 15px;
     object-fit: cover;
@@ -488,6 +497,8 @@ width:20px
     border-radius: 20px;
     margin-top: 5px;;
 }
+
+
 
 .retweet-card .tweet-header{
     grid-template-columns: 25px auto ;
@@ -538,4 +549,108 @@ a.link-card{
     fill:var(--text-gray);
     padding-top: 5px;
     
+}
+
+nav.bottom-nav-bar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    padding-top: 15px ;
+    position: fixed;
+    bottom: 0;
+
+    display: none;
+}
+
+nav.bottom-nav-bar ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   
+}
+
+nav.bottom-nav-bar ul li{
+    list-style: none;
+    justify-self: center;
+    
+}
+
+
+
+
+@media screen  and (max-width: 1250px)  {
+    body{
+        grid-template:
+        ". left-menu  main right-menu . "100vh/
+        1fr 80px 600px 6fr 1fr;
+        color: var(--primary-gray);
+    }
+    
+    .left-menu{
+        left: 10px;
+    }
+
+
+    .left-menu nav li{
+        display: block;
+    }
+
+
+    .account-tag .account-name,
+    .account-tag svg,
+    .create-tweet a.big-button,
+    .left-menu nav li span{
+        display: none;
+    }   
+
+    .left-menu .create-tweet a{
+        width: 50px;
+        
+    }
+    
+    .create-tweet a.small-button{
+        display: flex;
+    }
+
+}
+
+@media screen  and (max-width: 990px)  {
+    .right-menu{
+        display: none;
+    }
+
+}
+@media screen  and (max-width: 700px)  {
+body{
+    grid-template:
+    "left-menu  main  "100vh/
+    80px 1fr;
+}
+}
+
+@media screen  and (max-width: 500px)  {
+.left-menu{
+    display: none;
+}
+
+body{
+    grid-template:
+    "main"100vh/
+    1fr;
+}
+
+main header{
+    grid-template-columns:  60px 1fr 30px;
+}
+main header img.avatar{
+    display: block;
+
+}
+
+.content .create-tweet{
+    display: none;
+}
+
+nav.bottom-nav-bar{
+    display: block
+}
 }
