@@ -7,12 +7,6 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
-    background-image: url(assets/images/black.jpeg);
-    
-    
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -27,7 +21,20 @@ html{
 --link-blue: #1B95E0;
 --hover-background:rgba(29,161,242,0.1);
 --hover-card-background: #373737;
+--website-background:black;
+--icon-color:#d9d9d9;
 }
+
+.light{
+    --website-background:white;
+    --background-color:rgba(227, 237, 244, 0.866);
+    --primary-gray:rgb(0, 0, 0);
+    --text-gray:#595f63;
+    --border-color:1px solid rgb(203, 203, 203);
+   --icon-color: #1B95E0;
+}
+
+
 
 body{
     display: grid;
@@ -36,9 +43,11 @@ body{
     1fr 300px 600px 400px 5fr;
 
     color: var(--primary-gray);
+    /* background-image: url(assets/images/black.jpeg); */
+    background-color:var(--website-background);
 }
 
-svg.active-page{
+nav svg.active-page{
     fill:var(--link-blue)
 }
 
@@ -74,6 +83,10 @@ li:hover{
     padding: 5px 12px;
 }
 
+.icon svg{
+fill: var(--icon-color);
+}
+
 /* LEFT MENU NAV  */
 
 .left-menu nav ul{
@@ -90,6 +103,10 @@ li:hover{
 .left-menu nav li span{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+svg.nav{
+    fill: var(--primary-gray);
 }
 
 
@@ -339,7 +356,7 @@ text-decoration: underline;
 /* MAIN  */
 main{
     grid-area: main;
-    background-color:#15181c ;
+    background-color:var(--website-background) ;
     /* overflow: scroll; */
 
 }
