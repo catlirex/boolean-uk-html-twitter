@@ -124,7 +124,7 @@ li:hover{
 }
 
 /* LEFT MENU ACCOUNT TAG */
-.account-tag{
+.left-menu .account-tag{
     display: grid;
     grid-template-columns: 50px 150px 50px ;
 }
@@ -250,8 +250,6 @@ border-bottom: var(--border-color);
     object-fit: cover;
     border-radius: 10px;
     justify-self: right;
-    
-
 }
 
 
@@ -484,6 +482,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4,auto) 1fr;
     grid-gap: 5px;
+    position: relative;
 }
 
 .tweet-account-name span{
@@ -591,6 +590,7 @@ a.link-card{
     
 }
 
+/* BOTTOM NAV BAR  */
 nav.bottom-nav-bar{
     width: 100%;
     height: 60px;
@@ -627,11 +627,113 @@ nav.bottom-nav-bar ul li{
     background-color: var(--hover-background);
 }
 
+/* HOVER CARD  */
+
+.hover-account-card{
+    display: none;
+    grid-template:
+    "account status" 100px
+    "account-details account-details" auto/
+    180px 120px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+
+    position: absolute;
+    top:20px;
+    left:-40px;
+
+    box-shadow: 0 0 3px 1px var(--text-gray);
+    transition: 0.2s;
+    
+}
+
+.tweet-account-name:hover .hover-account-card{
+    display: grid;
+}
+
+.hover-account-card .account-tag{
+    grid-area: account;
+    padding: 20px;
+    
+}
+.hover-account-card .account-tag img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.hover-account-card .account-tag h2{
+    font-size: 1rem;
+    display: inline;
+}
+.hover-account-card .account-tag svg{
+    display: inline;
+    height: 20px;
+}
+
+.hover-account-card .status{
+    grid-area: status;
+    width: 100px;
+    height: 50px;
+    background-color: var(--link-blue);
+    
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    outline: inherit;
+    margin: 10px;
+	padding: 0;
+
+    font: inherit;
+	color: inherit;
+	font: inherit;
+    font-weight: 700;
+    transition: 0.1s;
+}
+.hover-account-card .status .unfol{
+    display: none;
+}
+
+.hover-account-card .status:hover .unfol{
+    display: block;
+    }
+.hover-account-card .status:hover .fol{
+    display: none;
+    }
+    .hover-account-card .status:hover{
+        background-color: rgb(165, 11, 78);
+    }
+
+
+.hover-account-card .account-details{
+    grid-area: account-details;
+    padding: 20px;
+    line-height: 1.3;
+}
+
+.hover-account-card .account-details p{
+    padding: 5px 0;
+}
+
+.hover-account-card .account-details strong{
+    color: var(--primary-gray);
+    font-size: 1rem;
+
+}
+
+.hover-account-card .account-details span{
+    display: inline-block;
+    padding: 10px 20px 10px 0;
+
+}
 
 
 
-
-
+/* RESPONSIVE DETAIL  */
 @media screen  and (max-width: 1250px)  {
     body{
         grid-template:
