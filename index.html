@@ -23,7 +23,7 @@
         <nav>
             <ul>
                 <li>
-                    <svg class="nav" 
+                    <svg class="nav active-page" 
                     fill="#d9d9d9" 
                     viewBox="0 0 24 24" 
                     height="30" 
@@ -138,14 +138,18 @@
         <header>
             <img class="avatar" src="/assets/icons/avatar.png" alt="avatar">
             <h1>Home</h1>
-            <svg class="top-tweet" 
-            fill="#d9d9d9" 
-            viewBox="0 0 24 24" 
-            height="30" 
-            width="30">
-            <g><path d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path></g>
-        </svg>
+                <div class="icon-container">
+                    <svg class="top-tweet" 
+                    fill="#d9d9d9" 
+                    viewBox="0 0 24 24" 
+                    height="30" 
+                    width="30">
+                    <g><path d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path></g>
+                    </svg>
+                </div>
+                
         </header>
+        
         <section class="content">
             <div class="create-tweet">
                 <img class="avatar" src="assets/icons/avatar.png" alt="avatar">
@@ -198,6 +202,7 @@
                     <div class="tweet-header">
                         <div class="tweet-account-name">
                             <h2>Premier League</h2>
+                            
                             <svg class="verified" 
                                 fill="#d9d9d9" 
                                 viewBox="0 0 24 24" 
@@ -205,17 +210,23 @@
                                 width="30">
                                 <g><path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g>
                             </svg>
+                        
                             <span>@premierlegue</span>
                             <span>. 6m</p></span>
                         </div>
-                        <svg class="more-icon" 
-                         fill="#d9d9d9" 
-                         viewBox="0 0 24 24" 
-                         height="20" 
-                         width="20" >
-                        <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
-                         </svg>
-                    </div>
+                        <div class="icon-container">
+                                <svg class="more-icon" 
+                                fill="#d9d9d9" 
+                                viewBox="0 0 24 24" 
+                                height="20" 
+                                width="20" >
+                                <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
+                                </svg>
+                            </div>
+
+
+                       </div>  
+                    
                     <article>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam quas exercitationem culpa tenetur reiciendis beatae nesciunt odio, accusamus suscipit laborum, cupiditate illum similique, aut libero voluptates dolores in rem!</p>
                         <img src="assets/images/post-image-1.jpeg" alt="HALF-TIME Crystal Palace 0-3 Chelsea">
@@ -282,13 +293,15 @@
                             <span>@hk_watch</span>
                             <span>. Apr 8</p></span>
                         </div>
-                        <svg class="more-icon" 
-                         fill="#d9d9d9" 
-                         viewBox="0 0 24 24" 
-                         height="20" 
-                         width="20" >
-                        <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
-                         </svg>
+                        <div class="icon-container">
+                            <svg class="more-icon" 
+                            fill="#d9d9d9" 
+                            viewBox="0 0 24 24" 
+                            height="20" 
+                            width="20" >
+                            <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
+                            </svg>
+                        </div>
                     </div>
                     <article>
                         <p>"The offer of British National Overseas passports to Hong Kong citizens and sanctions on Chinese officials attracted Beijing's ire, but China is used to being criticized while carrying on as normal," says <a href=".">@benedictorgers</a> </p>
@@ -370,13 +383,15 @@
                             <span>@maxhoma23</span>
                             <span>.30m</p></span>
                         </div>
-                        <svg class="more-icon" 
-                         fill="#d9d9d9" 
-                         viewBox="0 0 24 24" 
-                         height="20" 
-                         width="20" >
-                        <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
-                         </svg>
+                        <div class="icon-container">
+                                <svg class="more-icon" 
+                                fill="#d9d9d9" 
+                                viewBox="0 0 24 24" 
+                                height="20" 
+                                width="20" >
+                                <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
+                                </svg>
+                            </div>
                     </div>
                     <article>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam quas exercitationem culpa tenetur reiciendis beatae nesciunt odio, accusamus suscipit laborum, cupiditate illum similique, aut libero voluptates dolores in rem!</p>
@@ -465,13 +480,16 @@
                             <span>@premierlegue</span>
                             <span>. 6m</p></span>
                         </div>
-                        <svg class="more-icon" 
-                         fill="#d9d9d9" 
-                         viewBox="0 0 24 24" 
-                         height="20" 
-                         width="20" >
-                        <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
-                         </svg>
+                        <div class="icon-container">
+                            <svg class="more-icon" 
+                            fill="#d9d9d9" 
+                            viewBox="0 0 24 24" 
+                            height="20" 
+                            width="20" >
+                            <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
+                            </svg>
+                        </div>
+                        
                     </div>
                     <article>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam quas exercitationem culpa tenetur reiciendis beatae nesciunt odio, accusamus suscipit laborum, cupiditate illum similique, aut libero voluptates dolores in rem!</p>
@@ -539,6 +557,7 @@
                             <span>@hk_watch</span>
                             <span>. Apr 8</p></span>
                         </div>
+                        <div class="icon-container">
                         <svg class="more-icon" 
                          fill="#d9d9d9" 
                          viewBox="0 0 24 24" 
@@ -546,6 +565,7 @@
                          width="20" >
                         <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
                          </svg>
+                         </div>
                     </div>
                     <article>
                         <p>"The offer of British National Overseas passports to Hong Kong citizens and sanctions on Chinese officials attracted Beijing's ire, but China is used to being criticized while carrying on as normal," says <a href=".">@benedictorgers</a> </p>
@@ -627,6 +647,7 @@
                             <span>@maxhoma23</span>
                             <span>.30m</p></span>
                         </div>
+                            <div class="icon-container">
                         <svg class="more-icon" 
                          fill="#d9d9d9" 
                          viewBox="0 0 24 24" 
@@ -634,6 +655,7 @@
                          width="20" >
                         <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
                          </svg>
+                        </div>
                     </div>
                     <article>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam quas exercitationem culpa tenetur reiciendis beatae nesciunt odio, accusamus suscipit laborum, cupiditate illum similique, aut libero voluptates dolores in rem!</p>
@@ -722,6 +744,7 @@
                             <span>@hk_watch</span>
                             <span>. Apr 8</p></span>
                         </div>
+                        <div class="icon-container">
                         <svg class="more-icon" 
                          fill="#d9d9d9" 
                          viewBox="0 0 24 24" 
@@ -729,6 +752,7 @@
                          width="20" >
                         <g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g>
                          </svg>
+                        </div>
                     </div>
                     <article>
                         <p>"The offer of British National Overseas passports to Hong Kong citizens and sanctions on Chinese officials attracted Beijing's ire, but China is used to being criticized while carrying on as normal," says <a href=".">@benedictorgers</a> </p>
@@ -840,13 +864,15 @@
                         <a href=".">Topham</a>
                     </div>
                 </div>
-                <svg class="nav" 
-                    fill="#d9d9d9" 
-                    viewBox="0 0 24 24" 
-                    height="30" 
-                    width="30" >
-                    <g><circle cx="17" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="7" cy="12" r="1.5"></circle></g>
-                </svg>
+             
+                    <svg class="nav" 
+                        fill="#6E767D" 
+                        viewBox="0 0 24 24" 
+                        height="30" 
+                        width="30" >
+                        <g><circle cx="17" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="7" cy="12" r="1.5"></circle></g>
+                    </svg>
+                    
 
             </div>
             <div class="new-card">
@@ -873,7 +899,7 @@
                     </div>
                 </div>
                 <svg class="nav" 
-                    fill="#d9d9d9" 
+                    fill="#6E767D" 
                     viewBox="0 0 24 24" 
                     height="30" 
                     width="30" >
@@ -929,7 +955,7 @@
     <nav class="bottom-nav-bar">
         <ul>
             <li>
-                <svg class="nav" 
+                <svg class="nav active-page" 
                 fill="#d9d9d9" 
                 viewBox="0 0 24 24" 
                 height="30" 
